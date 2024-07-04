@@ -88,7 +88,7 @@ sudo apt-get update
 sudo apt-get -y install cudnn-cuda-12
 ```
 #
-### Reset Ubuntu
+### Reset Ubuntu 💥
 
 ```sh
 sudo dpkg --configure -a
@@ -177,7 +177,7 @@ conda create -n MainTP python==3.10.6
 ```
 - Python==3.10.6
 
-# Change Conda path for webui
+### Set main python path to that conda environment
 ```sh
 nano ~/.bashrc
 add this line -> export PATH=$HOME/<anaconda3 or miniconda3>/envs/main-wu/bin:$PATH
