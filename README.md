@@ -1,3 +1,70 @@
+# Ubuntu
+
+## CUDA! CUDA! CUDA!
+### Remove Nvidia drivers & CUDA & CuDNN Libraries
+```sh
+sudo apt-get --purge -y remove 'cuda*'
+sudo apt-get --purge -y remove 'nvidia*'
+sudo apt-get autoremove --purge cuda
+sudo rm -rf /usr/local/cuda*
+sudo apt-get --purge remove '*cud*'
+sudo apt-get autoremove --purge '*cud*'
+
+
+find / -name '*cuda*'
+sudo dpkg -l | grep nvidia
+sudo dpkg -l | grep cuda
+sudo apt-get remove --purge <Package Names>
+sudo apt-get autoclean
+```
+For edit of path
+```sh
+nano ~/.bashrc
+source ~/.bashrc
+```
+Disable nouveau
+```sh
+sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+```
+If it shows the following, you have done it correctly
+```sh
+blacklist nouveau
+options nouveau modeset=0
+```
+Update Kernel
+```sh
+sudo update-initramfs -u
+```
+#
+### Installing Nvidia Drivers
+Check current GPU model
+```sh
+lshw -numeric -C display
+lspci | grep -i nvidia
+```
+Check what drivers are available
+```sh
+ubuntu-drivers devices
+```
+1.Install the recommended driver
+```sh
+sudo ubuntu-drivers autoinstall
+```
+2.Install a certain version
+```sh
+sudo apt install nvidia-driver-<NUMBER>
+```
+### Installing CUDA Toolkit
+| CUDA | README |
+| ------ | ------ |
+| 12.1 | [developer.nvidia.com/cuda-12-1-0-download-archive](https://developer.nvidia.com/cuda-12-1-0-download-archive)|
+```sh
+wget https://developer.download.nvidia.com/compute/cuda/12.1.0/local_installers/cuda_12.1.0_530.30.02_linux.run
+sudo sh cuda_12.1.0_530.30.02_linux.run
+```
+
 # Install-Walkthroughs IJW (It Just Works!)
 ## _Three Studio_
 ### ✨Python & PyTorch✨
