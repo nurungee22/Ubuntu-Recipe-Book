@@ -128,7 +128,7 @@ Adding SSL access authentication to Xrdp
 sudo adduser xrdp ssl-cert
 sudo systemctl restart xrdp
 ```
-Setting Fortivpnclient 
+(Needed for certain people)Setting Fortivpnclient to attach to certain IP
 
 Install Fortivpnclient
 https://www.fortinet.com/support/product-downloads
@@ -160,6 +160,16 @@ sudo -i
 ```
 #
 # Install-Walkthroughs IJW (It Just Works!)
+## _Stable Diffusion WebUI with conda_
+### ✨Python & PyTorch✨
+```sh
+conda create -n stable-diffusion python==3.10.6
+```
+- Python==3.10.6
+```sh
+sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0
+```
+
 ## _Three Studio_
 ### ✨Python & PyTorch✨
 ```sh
