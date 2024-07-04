@@ -68,6 +68,26 @@ sudo sh cuda_12.1.0_530.30.02_linux.run
 ```
 🚨 Only Check the CUDA Toolkit and do not check the drivers, as they are outdated and fail to install in the first place
 
+### Installing cuDNN
+| cuDNN | Link |
+| ------ | ------ |
+| 9.2.1 | [developer.nvidia.com/cudnn-downloads](https://developer.nvidia.com/cudnn-downloads)|
+```sh
+wget https://developer.download.nvidia.com/compute/cudnn/9.2.1/local_installers/cudnn-local-repo-ubuntu2004-9.2.1_1.0-1_amd64.deb
+```
+```sh
+sudo dpkg -i cudnn-local-repo-ubuntu2004-9.2.1_1.0-1_amd64.deb
+```
+```sh
+sudo cp /var/cudnn-local-repo-ubuntu2004-9.2.1/cudnn-*-keyring.gpg /usr/share/keyrings/
+```
+```sh
+sudo apt-get update
+```
+```sh
+sudo apt-get -y install cudnn-cuda-12
+```
+#
 ### Reset Ubuntu
 
 ```sh
