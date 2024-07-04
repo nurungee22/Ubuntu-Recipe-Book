@@ -111,11 +111,52 @@ cd cmake-<>
 make
 sudo make install
 ```
+## Installing Xrdp & Xubuntu-desktop
+Installing Xubuntu Desktop
+```sh
+sudo apt update
+sudo apt install xubuntu-desktop
+```
+Installing Xrdp
+```sh
+sudo apt update
+sudo apt install xrdp
+sudo systemctl status xrdp
+```
+Adding SSL access authentication to Xrdp
+```sh
+sudo adduser xrdp ssl-cert
+sudo systemctl restart xrdp
+```
+Setting Fortivpnclient 
+
+Install Fortivpnclient
+https://www.fortinet.com/support/product-downloads
+
+Auto permission for color etc in Xrdp
+```sh
+sudo mkdir -p /etc/polkit-1/localauthority/50-local.d
+sudo nano /etc/polkit-1/localauthority/50-local.d/color.pkla
+```
+Edit as following
+```sh
+[Allow the actions for xRDP]
+Identity=unix-user:*
+Action=org.freedesktop.color-manager.create-device;org.freedesktop.NetworkManager.wifi.scan
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
+```sh
+
 # Tips & Commands
 Environment variables
 ```sh
 nano ~/.bashrc
 source ~/.bashrc
+```
+Login as Administrator
+```sh
+sudo -i
 ```
 #
 # Install-Walkthroughs IJW (It Just Works!)
