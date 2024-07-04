@@ -1,4 +1,4 @@
-# Ubuntu
+# Ubuntu 🔥
 
 ## CUDA! CUDA! CUDA!
 ### Remove Nvidia drivers & CUDA & CuDNN Libraries
@@ -112,7 +112,6 @@ make
 sudo make install
 ```
 # Tips & Commands
-#
 Environment variables
 ```sh
 nano ~/.bashrc
