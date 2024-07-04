@@ -173,12 +173,29 @@ crtl+x
 ## _Stable Diffusion WebUI with conda_
 ### ✨Python & PyTorch✨
 ```sh
-conda create -n stable-diffusion python==3.10.6
+conda create -n MainTP python==3.10.6
 ```
 - Python==3.10.6
+
+# Change Conda path for webui
 ```sh
-sudo apt install wget git python3 python3-venv libgl1 libglib2.0-0
+nano ~/.bashrc
+add this line -> export PATH=$HOME/<anaconda3 or miniconda3>/envs/main-wu/bin:$PATH
+source ~/.bashrc
 ```
+Install libg
+```sh
+sudo apt install libgl1 libglib2.0-0
+```
+Navigate to the directory for Stable-diffusion-webui
+```sh
+wget -q https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh
+```
+Run webui.sh with xformers
+```sh
+bash webui.sh --xformers
+```
+Check webui-user.sh for options.
 
 ## _Three Studio_
 ### ✨Python & PyTorch✨
