@@ -146,7 +146,7 @@ Action=org.freedesktop.color-manager.create-device;org.freedesktop.NetworkManage
 ResultAny=yes
 ResultInactive=yes
 ResultActive=yes
-```sh
+```
 
 # Tips & Commands
 Environment variables
@@ -157,6 +157,16 @@ source ~/.bashrc
 Login as Administrator
 ```sh
 sudo -i
+```
+## Shortcuts
+Open Terminal
+```sh
+crtl+alt+t
+```
+Save and Exit in Nano
+```sh
+crtl+s
+crtl+x
 ```
 #
 # Install-Walkthroughs IJW (It Just Works!)
