@@ -112,6 +112,9 @@ make
 sudo make install
 ```
 ## Installing Xrdp & Xubuntu-desktop
+Install Fortivpnclient
+https://www.fortinet.com/support/product-downloads
+
 Installing Xubuntu Desktop
 ```sh
 sudo apt update
@@ -129,9 +132,6 @@ sudo adduser xrdp ssl-cert
 sudo systemctl restart xrdp
 ```
 (Needed for certain people)Setting Fortivpnclient to attach to certain IP
-
-Install Fortivpnclient
-https://www.fortinet.com/support/product-downloads
 
 Auto permission for color etc in Xrdp
 ```sh
@@ -180,7 +180,7 @@ conda create -n MainTP python==3.10.6
 ### Set main python path to that conda environment
 ```sh
 nano ~/.bashrc
-add this line -> export PATH=$HOME/<anaconda3 or miniconda3>/envs/main-wu/bin:$PATH
+add this line -> export PATH=$HOME/<anaconda3 or miniconda3>/envs/MainTP/bin:$PATH
 source ~/.bashrc
 ```
 Install libg
