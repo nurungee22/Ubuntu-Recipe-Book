@@ -112,6 +112,7 @@ make
 sudo make install
 ```
 ## Installing Xrdp & Xubuntu-desktop
+(Needed for certain people)Setting Fortivpnclient to attach to certain IP
 Install Fortivpnclient
 https://www.fortinet.com/support/product-downloads
 
@@ -131,7 +132,7 @@ Adding SSL access authentication to Xrdp
 sudo adduser xrdp ssl-cert
 sudo systemctl restart xrdp
 ```
-(Needed for certain people)Setting Fortivpnclient to attach to certain IP
+
 
 Auto permission for color etc in Xrdp
 ```sh
@@ -147,8 +148,32 @@ ResultAny=yes
 ResultInactive=yes
 ResultActive=yes
 ```
-
+```sh
+echo xfce4-session >~/.xsession
+sudo nano /etc/xrdp/startwm.sh
+```
+```sh
+#!/bin/sh
+if [ -r /etc/default/locale ]; then
+    . /etc/default/locale
+    export LANG LANGUAGE
+fi
+```
+Start the Xfce desktop environment
+```sh
+startxfce4
+```
+```sh
+sudo systemctl restart xrdp
+sudo apt install xfce4
+```
 # Tips & Commands
+Installing a deb file
+```sh
+wget <download link>
+sudo dpkg -i 이름.deb
+sudo apt-get install -f
+```
 Environment variables
 ```sh
 nano ~/.bashrc
