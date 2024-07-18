@@ -197,6 +197,16 @@ Save and Exit in Nano
 crtl+s
 crtl+x
 ```
+Quickly select names with tab
+```sh
+ls
+7z2407-linux-x64.tar.xz
+```
+then type 
+```sh
+7z[tab]
+```
+will auto complete the name.
 #
 # Install-Walkthroughs IJW (It Just Works!)
 ## _Stable Diffusion WebUI with conda_
