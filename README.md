@@ -168,11 +168,15 @@ sudo systemctl restart xrdp
 sudo apt install xfce4
 ```
 # Tips & Commands
-Installing a deb file
+Installing 
 ```sh
 wget <download link>
 sudo dpkg -i 이름.deb
 sudo apt-get install -f
+```
+```sh
+tar -xf <filename>
+sudo mv <program file> /usr/local/bin/
 ```
 Environment variables
 ```sh
