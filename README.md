@@ -48,7 +48,7 @@ Check what drivers are available
 ```sh
 ubuntu-drivers devices
 ```
-1.Install the recommended driver
+1.Install the recommended driver (But for gcc just use certain version ex) 535)
 ```sh
 sudo ubuntu-drivers autoinstall
 ```
