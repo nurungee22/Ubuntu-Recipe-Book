@@ -68,6 +68,21 @@ sudo sh cuda_12.1.0_530.30.02_linux.run
 ```
 🚨 Only Check the CUDA Toolkit and do not check the drivers, as they are outdated and fail to install in the first place
 
+After add to Path
+
+```sh
+sudo nano ~/.bashrc
+```
+Add the following and save. (crtl+s, crtl+x)
+```sh
+#CUDA
+export PATH="/usr/local/cuda-12.1/bin:${PATH}"
+export LD_LIBRARY_PATH="/usr/local/cuda-12.1/lib64:${LD_LIBRARY_PATH}"
+```
+and 
+```sh
+source ~/.bashrc
+```
 ### Installing cuDNN
 | cuDNN | Link |
 | ------ | ------ |
