@@ -79,13 +79,19 @@ wget https://developer.download.nvidia.com/compute/cudnn/9.2.1/local_installers/
 sudo dpkg -i cudnn-local-repo-ubuntu2004-9.2.1_1.0-1_amd64.deb
 ```
 ```sh
+sudo apt-get update
+```
+```sh
+sudo apt-get -y install cudnn-cuda-12
+```
+```sh
 sudo cp /var/cudnn-local-repo-ubuntu2004-9.2.1/cudnn-*-keyring.gpg /usr/share/keyrings/
 ```
 ```sh
 sudo apt-get update
 ```
 ```sh
-sudo apt-get -y install cudnn-cuda-12
+sudo apt-get install libcudnn9 libcudnn9-dev libcudnn9-samples
 ```
 #
 ### Reset Ubuntu 💥
